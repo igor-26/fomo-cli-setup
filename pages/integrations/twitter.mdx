@@ -1,0 +1,36 @@
+import Prose from 'components/prose/ProseLayout'
+import Image from 'next/image'
+import MetaLink from 'components/MetaLink'
+
+# Setting up Twitter developer app
+
+<div className='border border-gray-200 flex rounded-md lg:rounded-xl mb-3'>
+	<Image
+		src='/images/usage_twitter.png'
+		alt='twitter usage'
+		height={944}
+		width={1720}
+		className='rounded-md lg:rounded-xl'
+	/>
+</div>
+
+<MetaLink
+	href='https://docs.tweepy.org/en/stable/authentication.html'
+	label='Tweepy auth flow'
+	isExternal
+/>
+
+0. Refer to <MetaLink label="fomo-cli repository" href="https://github.com/igor-26/fomo-cli" isExternal/> for prerequisites and installation.
+1. Log in to your Twitter account.
+2. Go to <MetaLink label="/portal/dashboard" href="https://developer.twitter.com/en/portal/dashboard" isExternal/>.
+3. Create an app.
+4. Generate the following keys on `Keys and tokens` tab:
+   - **consumer_key**
+   - **consumer_secret**
+   - **access_token**
+   - **access_token_secret**
+5. Copy over said values into the <MetaLink label=".env" href="https://github.com/igor-26/fomo-cli/blob/master/.env.example#L29" isExternal/> file you've created.
+
+6. You should be all set up to run the <MetaLink href='https://github.com/igor-26/fomo-cli#twitter' label='Twitter integration' isExternal/>.
+
+export default ({ children }) => <Prose>{children}</Prose>

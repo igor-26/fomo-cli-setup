@@ -1,0 +1,71 @@
+version: 2.1
+
+orbs:
+  cypress: cypress-io/cypress@2
+
+jobs:
+  build:
+    working_directory: ~/project
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - run:
+          name: update npm
+          command: 'sudo npm install -g npm'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: install dependencies
+          command: npm ci
+      - run:
+          name: build
+          command: npm run build
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/.npm
+            - ~/.cache
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules/*
+            - cypress/*
+  lint:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: lint
+          command: npm run lint
+  unit:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: unit tests
+          command: npm run test
+
+workflows:
+  styleguide:
+    jobs:
+      - build
+      - lint:
+          requires:
+            - build
+      - unit:
+          requires:
+            - build
+      - cypress/run:
+          executor: cypress/base-16-14-2-slim
+          name: e2e
+          requires:
+            - build
+          start: npm run dev
+          wait-on: 'http://localhost:3000'

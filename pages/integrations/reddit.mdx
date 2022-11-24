@@ -1,0 +1,46 @@
+import Prose from 'components/prose/ProseLayout'
+import Image from 'next/image'
+import MetaLink from 'components/MetaLink'
+
+# Setting up Reddit developer app
+
+<div className='border border-gray-200 flex rounded-md lg:rounded-xl mb-3'>
+	<Image
+		src='/images/usage_reddit.png'
+		alt='reddit usage'
+		height={946}
+		width={1722}
+		className='rounded-md lg:rounded-xl'
+	/>
+</div>
+
+<MetaLink
+	href='https://praw.readthedocs.io/en/stable/getting_started/authentication.html#password-flow'
+	label='PRAW password flow'
+	isExternal
+/>
+
+0. Refer to <MetaLink label="fomo-cli repository" href="https://github.com/igor-26/fomo-cli" isExternal/> for prerequisites and installation.
+1. Log in to your Reddit account.
+2. Go to <MetaLink label="/prefs/apps/" href="https://www.reddit.com/prefs/apps/" isExternal/>.
+3. Create an app as a `script`.
+4. Copy the following values into the <MetaLink href='https://github.com/igor-26/fomo-cli/blob/master/.env.example#L7' label='.env' isExternal/> file you've created:
+
+   **client_id:**
+   The client ID is at least a 14-character string listed just under “personal use script” for the desired developed application
+
+   **client_secret:**
+   The client secret is at least a 27-character string listed adjacent to secret for the application.
+
+   **password:**
+   The password for the Reddit account used to register the application.
+
+   **username:**
+   The username of the Reddit account used to register the application.
+
+   **user_agent:**
+   The value you've entered when creating the app.
+
+5. You should be all set up to run the <MetaLink href='https://github.com/igor-26/fomo-cli#reddit' label='Reddit integration' isExternal/>.
+
+export default ({ children }) => <Prose>{children}</Prose>

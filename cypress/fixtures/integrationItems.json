@@ -1,0 +1,14 @@
+[
+	{
+		"href": "/integrations/reddit",
+		"label": "Reddit"
+	},
+	{
+		"href": "/integrations/twitter",
+		"label": "Twitter"
+	},
+	{
+		"href": "/integrations/spotify",
+		"label": "Spotify"
+	}
+]

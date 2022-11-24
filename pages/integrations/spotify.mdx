@@ -1,0 +1,40 @@
+import Prose from 'components/prose/ProseLayout'
+import Image from 'next/image'
+import MetaLink from 'components/MetaLink'
+
+# Setting up Spotify developer app
+
+<div className='border border-gray-200 flex rounded-md lg:rounded-xl mb-3'>
+	<Image
+		src='/images/usage_spotify.png'
+		alt='spotify usage'
+		height={544}
+		width={1730}
+		className='rounded-md lg:rounded-xl'
+	/>
+</div>
+
+<MetaLink
+	href='https://spotipy.readthedocs.io/en/master/#getting-started'
+	label='Spotipy auth flow'
+	isExternal
+/>
+
+0. Refer to <MetaLink label="fomo-cli repository" href="https://github.com/igor-26/fomo-cli" isExternal/> for prerequisites and installation.
+1. Log in to your Spotify account.
+2. Go to <MetaLink label="/dashboard/applications" href="https://developer.spotify.com/dashboard/applications" isExternal/>.
+3. Create an app.
+4. Copy the following values into the <MetaLink href='https://github.com/igor-26/fomo-cli/blob/master/.env.example#L19' label='.env' isExternal/> file you've created:
+
+   **client_id:**
+   Located on /dashboard/applications/app_id.
+
+   **client_secret:**
+   Located on /dashboard/applications/app_id.
+
+   **redirect_uri:**
+   Redirect URI can be edited by clicking on `Edit Settings`.
+
+5. You should be all set up to run the <MetaLink href='https://github.com/igor-26/fomo-cli#spotify' label='Spotify integration' isExternal/>.
+
+export default ({ children }) => <Prose>{children}</Prose>
