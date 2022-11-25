@@ -15,7 +15,7 @@ describe('MetaLink', () => {
 				isExternal
 			/>
 		)
-        const renderedMetaLink = getByRole('link', { name: /github/i })
+		const renderedMetaLink = getByRole('link', { name: /github/i })
 		const renderedIcon = queryByLabelText('External link icon')
 
 		expect(renderedMetaLink).toBeTruthy()
