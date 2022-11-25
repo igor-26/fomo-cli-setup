@@ -26,9 +26,9 @@ npm i
 ```bash
 npm run dev
  ```
- ```
 
-## CI/CD
+## CI/CD status
+
 
 ![CircleCI](https://dl.circleci.com/status-badge/img/gh/igor-26/fomo-cli-setup/tree/master.svg?style=svg)
 ![Vercel](https://vercelbadge.vercel.app/api/igor-26/fomo-cli-setup)
