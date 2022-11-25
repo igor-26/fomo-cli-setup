@@ -1,8 +1,7 @@
+---
 version: 2.1
-
 orbs:
   cypress: cypress-io/cypress@2
-
 jobs:
   build:
     working_directory: ~/project
@@ -12,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: update npm
-          command: 'sudo npm install -g npm'
+          command: sudo npm install -g npm
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
@@ -51,7 +50,6 @@ jobs:
       - run:
           name: unit tests
           command: npm run test
-
 workflows:
   styleguide:
     jobs:
@@ -68,4 +66,4 @@ workflows:
           requires:
             - build
           start: npm run dev
-          wait-on: 'http://localhost:3000'
+          wait-on: http://localhost:3000
