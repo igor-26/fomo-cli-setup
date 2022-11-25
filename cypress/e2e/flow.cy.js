@@ -1,7 +1,6 @@
 describe('user flow', () => {
 	it('should simulate user clicking through the individual integration pages', () => {
-		/* will check this programmatically with fixtures if the number of pages gets too big */
-
+		// * will check this programmatically with fixtures if the number of pages gets too big
 		// start on index page
 		cy.visit('http://localhost:3000/')
 
@@ -13,6 +12,7 @@ describe('user flow', () => {
 		cy.findByRole('link', { name: /reddit/i }).click()
 		cy.url().should('include', '/integrations/reddit')
 
+		// * next/link gets flaky in CI, using { force: true } to counter that
 		// go next
 		cy.findByRole('link', { name: /twitter/i }).click({ force: true })
 		cy.url().should('include', '/integrations/twitter')
