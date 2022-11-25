@@ -1,5 +1,4 @@
 module.exports = {
-	// this will check Typescript files
 	'**/*.(ts|tsx)': () => 'tsc --noEmit',
 
 	'**/*.(ts|tsx|js)': (filenames) => [
