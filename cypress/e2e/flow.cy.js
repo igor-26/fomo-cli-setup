@@ -33,6 +33,7 @@ describe('user flow', () => {
 		cy.findByRole('link', { name: /reddit/i }).click({ force: true })
 		cy.url().should('include', '/integrations/reddit')
 	})
+
 	it('leads to correct URLs when using main navigation', () => {
 		// start on index page
 		cy.visit('http://localhost:3000/')
