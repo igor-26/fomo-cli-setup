@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom'
-import { queryByLabelText, render } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import MetaLink from 'components/MetaLink'
 
 describe('MetaLink', () => {

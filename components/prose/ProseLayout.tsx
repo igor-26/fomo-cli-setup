@@ -6,7 +6,7 @@ interface Props {
 	children: React.ReactNode
 }
 
-const Prose: React.FC<Props> = ({ children }) => (
+const ProseLayout: React.FC<Props> = ({ children }) => (
 	<Layout>
 		<article className='max-w-[672px] mx-auto block mb-16 text-gray-700 dark:text-gray-400 prose dark:prose-invert leading-7'>
 			{children}
@@ -17,4 +17,4 @@ const Prose: React.FC<Props> = ({ children }) => (
 	</Layout>
 )
 
-export default Prose
+export default ProseLayout
