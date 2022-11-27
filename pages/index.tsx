@@ -45,7 +45,7 @@ const Index: React.FC = () => (
 					</div>
 				</div>
 			</div>
-			<div className='border border-gray-200 flex rounded-md lg:rounded-xl mb-3'>
+			<div className='terminal-image flex rounded-md lg:rounded-xl mb-3'>
 				<Image
 					src='/images/fomo.gif'
 					priority
