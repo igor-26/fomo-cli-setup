@@ -150,7 +150,7 @@ exports[`Index page matches snapshot 1`] = `
               </div>
             </div>
             <div
-              class="border border-gray-200 flex rounded-md lg:rounded-xl mb-3"
+              class="terminal-image flex rounded-md lg:rounded-xl mb-3"
             >
               <span
                 style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
