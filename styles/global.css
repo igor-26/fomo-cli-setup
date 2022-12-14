@@ -5,7 +5,7 @@
 	.copyright-container a {
 		@apply underline;
 	}
-    .terminal-image {
-        @apply border border-gray-200 dark:border-gray-400;
-    }
+	.terminal-image {
+		@apply border border-gray-200 dark:border-gray-400;
+	}
 }
