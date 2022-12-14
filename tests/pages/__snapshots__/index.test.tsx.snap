@@ -50,6 +50,7 @@ exports[`Index page matches snapshot 1`] = `
                       GitHub
                     </span>
                     <svg
+                      aria-hidden="true"
                       aria-label="External link icon"
                       class="w-4 h-4"
                       fill="currentColor"
@@ -224,6 +225,7 @@ exports[`Index page matches snapshot 1`] = `
                     GitHub
                   </span>
                   <svg
+                    aria-hidden="true"
                     aria-label="External link icon"
                     class="w-4 h-4"
                     fill="currentColor"
@@ -266,6 +268,7 @@ exports[`Index page matches snapshot 1`] = `
                 igor-26
               </span>
               <svg
+                aria-hidden="true"
                 aria-label="External link icon"
                 class="w-4 h-4"
                 fill="currentColor"
@@ -303,6 +306,7 @@ exports[`Index page matches snapshot 1`] = `
                 Next.js
               </span>
               <svg
+                aria-hidden="true"
                 aria-label="External link icon"
                 class="w-4 h-4"
                 fill="currentColor"
